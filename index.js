@@ -184,12 +184,19 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(tatlar, deger){
-//  yeniDizi2= kopyala(tatlar);
-//  yeniDizi2.filter(deger) Filter kullanmayını görünce beynim durdu. 
+function ismeGoreFiltrele(orijinalTatlar, deger) {
+
+  let yeniDizi= [];
+
+  for (let i = 0; i < orijinalTatlar.length; i++) {
+    if (orijinalTatlar[i].includes(deger)) {
+      yeniDizi.push(orijinalTatlar[i]) ;
+    }
+  }  
+  return yeniDizi;  
 }
 
-
+console.log(ismeGoreFiltrele(orijinalTatlar,"Çikolata"))
 
 /* ALIŞTIRMA */
 
